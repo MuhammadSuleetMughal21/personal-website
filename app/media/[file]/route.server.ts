@@ -10,7 +10,7 @@ const MIME: Record<string, string> = {
 };
 
 /** Serves images uploaded from the admin panel (stored in data/uploads). */
-export async function GET(_req: Request, ctx: RouteContext<"/media/[file]">) {
+export async function GET(_req: Request, ctx: { params: Promise<{ file: string }> }) {
   const { file } = await ctx.params;
   // Only plain generated names: no slashes, no dot-dot.
   if (!/^[a-z0-9-]+\.(png|jpg|webp|gif|avif)$/.test(file)) {

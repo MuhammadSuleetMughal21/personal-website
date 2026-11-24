@@ -47,3 +47,7 @@ next-env.d.ts
 # local backups
 Archive.zip
 __MACOSX/
+
+# GitHub Pages export + deploy clone
+/.next-export/
+/.deploy/

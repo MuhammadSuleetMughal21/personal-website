@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { readMessagesRaw, saveMessages } from "@/lib/content";
 import { rejectUnauthorized } from "@/lib/apiAuth";
 
-export async function PATCH(request: Request, ctx: RouteContext<"/api/admin/messages/[id]">) {
+export async function PATCH(request: Request, ctx: { params: Promise<{ id: string }> }) {
   const denied = rejectUnauthorized(request);
   if (denied) return denied;
   const { id } = await ctx.params;
@@ -15,7 +15,7 @@ export async function PATCH(request: Request, ctx: RouteContext<"/api/admin/mess
   return NextResponse.json({ ok: true });
 }
 
-export async function DELETE(request: Request, ctx: RouteContext<"/api/admin/messages/[id]">) {
+export async function DELETE(request: Request, ctx: { params: Promise<{ id: string }> }) {
   const denied = rejectUnauthorized(request);
   if (denied) return denied;
   const { id } = await ctx.params;

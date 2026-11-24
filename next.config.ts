@@ -9,7 +9,8 @@ import type { NextConfig } from "next";
 const isExport = process.env.STATIC_EXPORT === "1";
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
+  // Cache Components implies partial prerendering, which Next refuses in export mode.
+  cacheComponents: !isExport,
   ...(isExport
     ? {
         output: "export",
@@ -27,6 +28,8 @@ const nextConfig: NextConfig = {
     },
   },
   turbopack: {
+    // Export build: the page reads content.json directly instead of the "use cache" reader.
+    ...(isExport ? { resolveAlias: { "@/lib/siteContent": "./lib/siteContent.static.ts" } } : {}),
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],

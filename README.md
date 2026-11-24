@@ -19,17 +19,31 @@ npm run dev        # http://localhost:3000
 | What | File |
 | --- | --- |
 | Site content | `data/content.json` |
-| Contact messages | `data/messages.json` |
+| Contact messages (legacy, from before the form service) | `data/messages.json` |
 | Uploaded images | `data/uploads/` (served at `/media/<file>`) |
 
 The site owns this data. The admin reads and writes it through `/api/admin/*`, which requires
 `Authorization: Bearer <ADMIN_API_KEY>`. The site re-validates everything it receives (`lib/schema.ts`).
-Host the site somewhere with a writable disk (VPS, Railway, Render with a disk). On serverless
-hosts like Vercel, swap `lib/content.ts` for a database.
+
+## Publish to GitHub Pages
+
+The public site is a static export at **https://muhammadsuleetmughal21.github.io**. The admin
+panel stays on this Mac: edit content locally, then publish.
+
+```bash
+npm run deploy            # build static site + push to the MuhammadSuleetMughal21.github.io repo
+npm run deploy -- --dry   # build only; preview with `npm run preview:static` (http://localhost:4000)
+```
+
+`STATIC_EXPORT=1` (set by the deploy script) turns on `output: "export"` and leaves out every
+`route.server.ts` file (the admin API and `/media` handler only run locally). Uploaded images are
+copied to `media/` in the export. The contact form posts to Web3Forms or Formspree from the
+browser (`lib/contactForm.ts`, keys in `.env.local`, see `.env.example`).
 
 ## Code map
 
 - `app/(site)/page.tsx`: the page; sections in `components/site/`
-- `app/actions.ts`: contact form
-- `app/api/admin/`: content, messages and upload API for the admin app
+- `lib/contactForm.ts`: contact form (form service, or email-app fallback)
+- `app/api/admin/**/route.server.ts`: content, messages and upload API for the admin app (local only)
+- `scripts/deploy.mjs`: GitHub Pages publish
 - `lib/content.ts`: file store (`getContent()` is cached and tagged `content`)
