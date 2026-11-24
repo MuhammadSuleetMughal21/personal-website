@@ -1,9 +1,9 @@
 "use client";
 
-import { useActionState, useMemo, useRef, useState } from "react";
+import { useActionState, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowUpRight, Check, Copy, Mail, Phone } from "lucide-react";
-import { makeSendMessage, type ContactState } from "@/lib/contactForm";
+import { sendMessage, type ContactState } from "@/app/actions";
 import { gsap, SplitText, useGSAP } from "@/lib/gsap";
 import type { Profile } from "@/lib/types";
 import Magnetic from "./Magnetic";
@@ -11,7 +11,6 @@ import SectionLabel from "./SectionLabel";
 
 export default function Contact({ profile }: { profile: Profile }) {
   const root = useRef<HTMLElement>(null);
-  const sendMessage = useMemo(() => makeSendMessage(profile.email), [profile.email]);
   const [state, action, pending] = useActionState<ContactState, FormData>(sendMessage, {});
   const [copied, setCopied] = useState(false);
 
@@ -98,14 +97,8 @@ export default function Contact({ profile }: { profile: Profile }) {
                   >
                     <Check size={36} />
                   </motion.span>
-                  <h3 className="mt-6 font-display text-3xl font-semibold">
-                    {state.via === "email" ? "Almost there" : "Message sent"}
-                  </h3>
-                  <p className="mt-2 text-muted">
-                    {state.via === "email"
-                      ? "Your email app should open with the message ready. Just hit send."
-                      : "Thanks! I'll get back to you soon."}
-                  </p>
+                  <h3 className="mt-6 font-display text-3xl font-semibold">Message sent</h3>
+                  <p className="mt-2 text-muted">Thanks! I&apos;ll get back to you soon.</p>
                 </motion.div>
               ) : (
                 <motion.form key="form" action={action} exit={{ opacity: 0, y: -20 }} className="space-y-6">

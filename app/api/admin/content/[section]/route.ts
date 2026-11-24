@@ -6,7 +6,7 @@ import { COLLECTION_KEYS, collections, profileFields, sanitize, slugId } from "@
 import type { CollectionKey, Profile, SiteContent } from "@/lib/types";
 
 /** Replace one section of the content: `profile` or any collection key. */
-export async function PUT(request: Request, ctx: { params: Promise<{ section: string }> }) {
+export async function PUT(request: Request, ctx: RouteContext<"/api/admin/content/[section]">) {
   const denied = rejectUnauthorized(request);
   if (denied) return denied;
 

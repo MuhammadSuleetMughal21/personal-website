@@ -1,35 +1,14 @@
 import type { NextConfig } from "next";
 
-/**
- * STATIC_EXPORT=1 builds a plain static site into `out/` for GitHub Pages
- * (see scripts/deploy.mjs). That build leaves out the server-only routes
- * (`route.server.ts`: the admin API and the /media handler), which only run
- * locally where the admin panel talks to the site.
- */
-const isExport = process.env.STATIC_EXPORT === "1";
-
 const nextConfig: NextConfig = {
-  // Cache Components implies partial prerendering, which Next refuses in export mode.
-  cacheComponents: !isExport,
-  ...(isExport
-    ? {
-        output: "export",
-        // Separate build folder so an export never clobbers a running `next start`.
-        distDir: ".next-export",
-        pageExtensions: ["tsx", "ts", "jsx", "js"],
-      }
-    : {
-        partialPrefetching: true,
-        pageExtensions: ["server.ts", "tsx", "ts", "jsx", "js"],
-      }),
+  cacheComponents: true,
+  partialPrefetching: true,
   experimental: {
     serverActions: {
       bodySizeLimit: "2mb",
     },
   },
   turbopack: {
-    // Export build: the page reads content.json directly instead of the "use cache" reader.
-    ...(isExport ? { resolveAlias: { "@/lib/siteContent": "./lib/siteContent.static.ts" } } : {}),
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],

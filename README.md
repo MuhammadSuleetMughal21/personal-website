@@ -18,32 +18,29 @@ npm run dev        # http://localhost:3000
 
 | What | File |
 | --- | --- |
-| Site content | `data/content.json` |
-| Contact messages (legacy, from before the form service) | `data/messages.json` |
-| Uploaded images | `data/uploads/` (served at `/media/<file>`) |
+| Site content | `data/content.json` (local, and the seed) / `site_content` table (Vercel) |
+| Contact messages | `data/messages.json` (local) / `messages` table (Vercel) |
+| Images | `public/media/` (shipped + local uploads) / Vercel Blob (uploads on Vercel) |
 
 The site owns this data. The admin reads and writes it through `/api/admin/*`, which requires
 `Authorization: Bearer <ADMIN_API_KEY>`. The site re-validates everything it receives (`lib/schema.ts`).
 
-## Publish to GitHub Pages
+## Deploy (Vercel)
 
-The public site is a static export at **https://muhammadsuleetmughal21.github.io**. The admin
-panel stays on this Mac: edit content locally, then publish.
+Both apps run on Vercel as separate projects. On Vercel the site stores content and contact
+messages in Postgres (Neon) and admin image uploads in Vercel Blob:
 
-```bash
-npm run deploy            # build static site + push to the MuhammadSuleetMughal21.github.io repo
-npm run deploy -- --dry   # build only; preview with `npm run preview:static` (http://localhost:4000)
-```
+- `DATABASE_URL`: set by Vercel's Neon integration (Storage → Neon). An empty database is seeded
+  from `data/content.json` on first use; tables are created automatically.
+- `BLOB_READ_WRITE_TOKEN`: set by connecting a Blob store (Storage → Blob).
+- `ADMIN_API_KEY`: same value as in the admin project.
 
-`STATIC_EXPORT=1` (set by the deploy script) turns on `output: "export"` and leaves out every
-`route.server.ts` file (the admin API and `/media` handler only run locally). Uploaded images are
-copied to `media/` in the export. The contact form posts to Web3Forms or Formspree from the
-browser (`lib/contactForm.ts`, keys in `.env.local`, see `.env.example`).
+Without `DATABASE_URL` (local), everything uses the files in `data/` and uploads go to `public/media/`.
+Images that ship with the site live in `public/media/` (served at `/media/<file>`).
 
 ## Code map
 
 - `app/(site)/page.tsx`: the page; sections in `components/site/`
-- `lib/contactForm.ts`: contact form (form service, or email-app fallback)
-- `app/api/admin/**/route.server.ts`: content, messages and upload API for the admin app (local only)
-- `scripts/deploy.mjs`: GitHub Pages publish
-- `lib/content.ts`: file store (`getContent()` is cached and tagged `content`)
+- `app/actions.ts`: contact form (saves to the admin inbox)
+- `app/api/admin/`: content, messages and upload API for the admin app
+- `lib/content.ts`: store (Postgres or files; `getContent()` is cached and tagged `content`)

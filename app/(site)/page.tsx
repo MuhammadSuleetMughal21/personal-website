@@ -1,4 +1,4 @@
-import { getContent } from "@/lib/siteContent";
+import { getContent } from "@/lib/content";
 import SmoothScroll from "@/components/site/SmoothScroll";
 import Preloader from "@/components/site/Preloader";
 import Cursor from "@/components/site/Cursor";

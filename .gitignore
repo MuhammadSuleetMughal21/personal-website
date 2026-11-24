@@ -39,8 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-/data/uploads/*
-!/data/uploads/.gitkeep
 
 !.env.example
 
@@ -48,6 +46,3 @@ next-env.d.ts
 Archive.zip
 __MACOSX/
 
-# GitHub Pages export + deploy clone
-/.next-export/
-/.deploy/
