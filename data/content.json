@@ -1,0 +1,573 @@
+{
+  "profile": {
+    "name": "Muhammad Suleet",
+    "shortName": "Suleet",
+    "role": "Mobile Application Developer",
+    "headline": "I build mobile apps people love to open.",
+    "tagline": "React Native · iOS · Android · MERN",
+    "summary": "React Native developer with 3+ years of experience shipping 15+ production iOS and Android apps across health, e-commerce, travel, logistics and AI. I own the whole journey: Redux-driven mobile UIs, Node APIs and Firebase backends, all the way to release on the App Store and Google Play.",
+    "location": "Karachi, Pakistan",
+    "email": "suleet18@gmail.com",
+    "phone": "+92 317 002 5508",
+    "available": true,
+    "availabilityText": "Available for freelance & full-time roles",
+    "avatar": "/media/mwpbtjx1-a9e2230d34fd.jpg",
+    "resumeUrl": "",
+    "socials": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/MuhammadSuleetMughal21"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/suleet-mughal-9a7b86263"
+      }
+    ],
+    "stats": [
+      {
+        "value": "15+",
+        "label": "Apps shipped"
+      },
+      {
+        "value": "3+",
+        "label": "Years building"
+      },
+      {
+        "value": "5",
+        "label": "Industries"
+      },
+      {
+        "value": "2",
+        "label": "App stores"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "iter",
+      "name": "ITER Travel Planner",
+      "year": "2025",
+      "category": "Travel",
+      "description": "A travel planning app that helps users build, organize and manage trips end to end.",
+      "features": [
+        "AI itinerary generation with day-by-day plans",
+        "Real-time group chat for travellers on the same trip",
+        "Subscriptions with entitlement gating across platforms"
+      ],
+      "tags": [
+        "React Native",
+        "Redux",
+        "REST API"
+      ],
+      "platforms": [
+        "iOS",
+        "Android"
+      ],
+      "color": "#7c6cff",
+      "appStore": "https://apps.apple.com/us/app/iter-ai-travel-trip-planner/id6748836872",
+      "playStore": "https://play.google.com/store/apps/details?id=com.iter.travel.app",
+      "screens": [],
+      "banners": [
+        "/media/store-iter-1.jpg",
+        "/media/store-iter-2.jpg",
+        "/media/store-iter-3.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "fitfindai",
+      "name": "FitFindAI",
+      "year": "2025",
+      "category": "Health · AI",
+      "description": "An AI-powered fitness discovery app that surfaces tailored workouts and classes.",
+      "features": [
+        "AI-matched workouts and classes for each user",
+        "Personalized fitness discovery feed",
+        "Progress tracking with smart reminders"
+      ],
+      "tags": [
+        "React Native",
+        "AI",
+        "Firebase"
+      ],
+      "platforms": [
+        "iOS",
+        "Android"
+      ],
+      "color": "#22c55e",
+      "appStore": "https://apps.apple.com/us/app/fitfindai/id6751608719",
+      "playStore": "https://play.google.com/store/apps/details?id=com.fitandfun",
+      "screens": [],
+      "banners": [
+        "/media/store-fitfindai-1.jpg",
+        "/media/store-fitfindai-2.jpg",
+        "/media/store-fitfindai-3.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "gasup",
+      "name": "GasUp",
+      "year": "2024",
+      "category": "Logistics",
+      "description": "On-demand fuel delivery with live order tracking and real-time status updates.",
+      "features": [
+        "On-demand fuel ordering in a few taps",
+        "Live driver tracking on the map",
+        "Saved vehicles and payment methods"
+      ],
+      "tags": [
+        "React Native",
+        "Maps",
+        "Node.js"
+      ],
+      "platforms": [
+        "iOS",
+        "Android"
+      ],
+      "color": "#f97316",
+      "appStore": "https://apps.apple.com/us/app/gasup/id6753995456",
+      "playStore": "",
+      "screens": [],
+      "banners": [
+        "/media/store-gasup-1.jpg",
+        "/media/store-gasup-2.jpg",
+        "/media/store-gasup-3.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "sylenze",
+      "name": "Sylenze",
+      "year": "2024",
+      "category": "Education",
+      "description": "A secure school video-sharing platform built for safe, private classroom content.",
+      "features": [
+        "Secure, private video sharing built for schools",
+        "Role-based access for staff and students",
+        "Moderated uploads with safe playback"
+      ],
+      "tags": [
+        "React Native",
+        "Firebase",
+        "Auth"
+      ],
+      "platforms": [
+        "iOS",
+        "Android"
+      ],
+      "color": "#38bdf8",
+      "appStore": "https://apps.apple.com/us/app/sylenze/id6759919165",
+      "playStore": "https://play.google.com/store/apps/details?id=com.sylenze",
+      "screens": [],
+      "banners": [
+        "/media/store-sylenze-1.jpg",
+        "/media/store-sylenze-2.jpg",
+        "/media/store-sylenze-3.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "kowala",
+      "name": "Kowala",
+      "year": "2024",
+      "category": "Health · Wellbeing",
+      "description": "A student wellbeing and social-emotional learning app supporting teen mental health.",
+      "features": [
+        "Daily wellbeing check-ins for students",
+        "Guided social-emotional learning activities",
+        "Private, secure student journaling"
+      ],
+      "tags": [
+        "React Native",
+        "Firebase",
+        "Analytics"
+      ],
+      "platforms": [
+        "iOS",
+        "Android"
+      ],
+      "color": "#f43f5e",
+      "appStore": "https://apps.apple.com/us/app/kowala-teen-wellbeing/id6758218557",
+      "playStore": "https://play.google.com/store/apps/details?id=com.mindzen",
+      "screens": [],
+      "banners": [
+        "/media/store-kowala-1.jpg",
+        "/media/store-kowala-2.jpg",
+        "/media/store-kowala-3.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "docucares",
+      "name": "Docucares",
+      "year": "2026",
+      "category": "Healthcare",
+      "description": "A documentation and compliance app for home care agencies: nurses schedule visits and complete assessment forms on their phone, and the office reviews and tracks compliance.",
+      "features": [
+        "Visit scheduling with pending, overdue and returned-for-correction states",
+        "Digital assessment forms with drafts, on-screen signatures and attachments",
+        "Office review flow, audit trail and per-nurse compliance analytics"
+      ],
+      "tags": [
+        "React Native",
+        "Healthcare",
+        "Forms & e-signatures"
+      ],
+      "platforms": [
+        "Android"
+      ],
+      "color": "#2563eb",
+      "appStore": "",
+      "playStore": "https://play.google.com/store/apps/details?id=com.docucare_app",
+      "screens": [],
+      "banners": [
+        "/media/store-docucares-1.jpg",
+        "/media/store-docucares-2.jpg",
+        "/media/store-docucares-3.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "rememberme",
+      "name": "RememberMe Memorial",
+      "year": "2026",
+      "category": "Lifestyle",
+      "description": "A digital memorial app that pairs each life story with an engraved QR plaque, so anyone who scans it can explore photos, videos and memories.",
+      "features": [
+        "Memorials with life timeline, photo and video galleries, and voice recordings",
+        "Personalised QR plaques: design, preview and order in-app",
+        "Family invites, moderated tributes, and a Memorial Plus subscription via Stripe"
+      ],
+      "tags": [
+        "React Native",
+        "Stripe",
+        "QR codes"
+      ],
+      "platforms": [
+        "iOS"
+      ],
+      "color": "#d4a373",
+      "appStore": "https://apps.apple.com/us/app/rememberme-memorial/id6814919813",
+      "playStore": "",
+      "screens": [],
+      "banners": [
+        "/media/store-rememberme-1.jpg",
+        "/media/store-rememberme-2.jpg",
+        "/media/store-rememberme-3.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "spot",
+      "name": "Spot Marketmap",
+      "year": "2026",
+      "category": "Marketplace",
+      "description": "A marketplace for discovering and listing cars and real estate, with map-based search and direct buyer–seller chat.",
+      "features": [
+        "Car and property listings with search, filters and a map view",
+        "In-app chat plus offers and bids on any listing",
+        "Create and manage your own listings, with premium subscriptions"
+      ],
+      "tags": [
+        "React Native",
+        "Maps",
+        "In-app chat"
+      ],
+      "platforms": [
+        "iOS"
+      ],
+      "color": "#3b82f6",
+      "appStore": "https://apps.apple.com/pk/app/spot-marketmap/id6746220715",
+      "playStore": "",
+      "screens": [],
+      "banners": [
+        "/media/store-spot-1.jpg",
+        "/media/store-spot-2.jpg",
+        "/media/store-spot-3.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "modworks",
+      "name": "ModWorks",
+      "year": "2025",
+      "category": "Productivity",
+      "description": "A field work and task management app for coordinating on-site teams and jobs.",
+      "features": [
+        "Field task assignment and scheduling",
+        "Offline-capable job updates from the field",
+        "Photo and status reporting"
+      ],
+      "tags": [
+        "React Native",
+        "Redux",
+        "Offline-first"
+      ],
+      "platforms": [
+        "iOS"
+      ],
+      "color": "#e879f9",
+      "appStore": "https://apps.apple.com/us/app/modworks/id6757504792",
+      "playStore": "",
+      "screens": [],
+      "banners": [
+        "/media/store-modworks-1.jpg",
+        "/media/store-modworks-2.jpg",
+        "/media/store-modworks-3.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "havera",
+      "name": "Havera",
+      "year": "2024",
+      "category": "E-commerce",
+      "description": "A gamified rewards and loyalty app that keeps customers engaged and coming back.",
+      "features": [
+        "Gamified rewards and loyalty points",
+        "Tiered perks, streaks and challenges",
+        "Personalized offers that drive retention"
+      ],
+      "tags": [
+        "React Native",
+        "Gamification",
+        "REST API"
+      ],
+      "platforms": [
+        "Android"
+      ],
+      "color": "#a78bfa",
+      "appStore": "",
+      "playStore": "https://play.google.com/store/apps/details?id=com.havera",
+      "screens": [],
+      "banners": [
+        "/media/store-havera-1.jpg",
+        "/media/store-havera-2.jpg",
+        "/media/store-havera-3.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "industrial-pmr",
+      "name": "Industrial PMR",
+      "year": "2025",
+      "category": "Industrial",
+      "description": "An industrial maintenance and reporting app for logging issues and tracking repairs.",
+      "features": [
+        "Maintenance logging and incident reporting",
+        "Asset and issue tracking end to end",
+        "MERN-powered reporting dashboards"
+      ],
+      "tags": [
+        "React Native",
+        "MERN",
+        "MongoDB"
+      ],
+      "platforms": [
+        "iOS",
+        "Android"
+      ],
+      "color": "#94a3b8",
+      "appStore": "https://apps.apple.com/us/app/industrialpmr/id6744401857",
+      "playStore": "https://play.google.com/store/apps/details?id=com.industrialpmr",
+      "screens": [],
+      "banners": [
+        "/media/store-industrial-pmr-1.jpg",
+        "/media/store-industrial-pmr-2.jpg",
+        "/media/store-industrial-pmr-3.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "fitness-by-gracie",
+      "name": "Fitness By Gracie",
+      "year": "2024",
+      "category": "Health",
+      "description": "A personal fitness coaching app connecting clients with tailored training plans.",
+      "features": [
+        "1:1 coaching with tailored training plans",
+        "In-app progress and check-ins",
+        "Secure client authentication"
+      ],
+      "tags": [
+        "React Native",
+        "Firebase",
+        "Auth"
+      ],
+      "platforms": [
+        "iOS"
+      ],
+      "color": "#2dd4bf",
+      "appStore": "https://apps.apple.com/us/app/fitnessbygracie/id6473058305",
+      "playStore": "",
+      "screens": [],
+      "banners": [
+        "/media/store-fitness-by-gracie-1.jpg",
+        "/media/store-fitness-by-gracie-2.jpg",
+        "/media/store-fitness-by-gracie-3.jpg"
+      ],
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "id": "tafsol",
+      "role": "Mobile Application Developer",
+      "company": "Tafsol Technologies",
+      "period": "May 2025 — Present",
+      "location": "Karachi",
+      "points": [
+        "Build and ship cross-platform React Native apps for international clients",
+        "Own releases to the App Store and Google Play end to end",
+        "Integrate AI features, subscriptions and real-time chat"
+      ]
+    },
+    {
+      "id": "decotechs",
+      "role": "MERN Stack & Mobile Application Developer",
+      "company": "Decotechs",
+      "period": "May 2024 — Apr 2025",
+      "location": "Karachi",
+      "points": [
+        "Delivered mobile apps and their Node/Express + MongoDB backends",
+        "Set up Redux architecture and reusable component libraries",
+        "Worked across health, logistics and education products"
+      ]
+    },
+    {
+      "id": "moziky",
+      "role": "Associate Software Engineer",
+      "company": "Moziky",
+      "period": "Jul 2023 — Feb 2024",
+      "location": "Karachi",
+      "points": [
+        "Built React and React Native features in a product team",
+        "Integrated REST APIs and Firebase services",
+        "Learned the craft of shipping production code"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "mobile",
+      "title": "Mobile",
+      "items": [
+        "React Native",
+        "Expo",
+        "iOS",
+        "Android",
+        "Reanimated",
+        "React Navigation",
+        "Push Notifications",
+        "In-App Purchases"
+      ]
+    },
+    {
+      "id": "state",
+      "title": "State & Data",
+      "items": [
+        "Redux Toolkit",
+        "MobX",
+        "React Query",
+        "Axios",
+        "REST APIs",
+        "WebSockets"
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Backend & Cloud",
+      "items": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Firebase",
+        "Firestore",
+        "Cloud Functions"
+      ]
+    },
+    {
+      "id": "web",
+      "title": "Web & Tools",
+      "items": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Git",
+        "Xcode",
+        "Android Studio",
+        "Figma"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "cross-platform",
+      "title": "Cross-platform apps",
+      "description": "Native-feeling iOS and Android apps from one React Native codebase: fast, reliable and store-ready.",
+      "icon": "smartphone"
+    },
+    {
+      "id": "fullstack",
+      "title": "Full-stack products",
+      "description": "The API, database and admin tools behind your app, built with Node, Express, MongoDB and Firebase.",
+      "icon": "server"
+    },
+    {
+      "id": "ai",
+      "title": "AI features",
+      "description": "Chatbots, voice-to-text, recommendations and smart flows wired into shipping products.",
+      "icon": "sparkles"
+    },
+    {
+      "id": "release",
+      "title": "Store releases",
+      "description": "Signing, builds, review guidelines and launch: I take your app all the way to the App Store and Google Play.",
+      "icon": "rocket"
+    }
+  ],
+  "process": [
+    {
+      "id": "discover",
+      "title": "Discover",
+      "description": "We pin down the users, the core flows and what version one really needs."
+    },
+    {
+      "id": "design",
+      "title": "Prototype",
+      "description": "Clickable flows and a component system, so we test the feel before we write the code."
+    },
+    {
+      "id": "build",
+      "title": "Build",
+      "description": "Weekly builds on TestFlight and Play internal testing, so you see progress on your own phone."
+    },
+    {
+      "id": "launch",
+      "title": "Launch",
+      "description": "Store listings, review and release, then analytics and iteration once real users arrive."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "Suleet shipped our React Native app ahead of schedule and handled the entire App Store release without a hitch.",
+      "name": "Client name",
+      "title": "Product Manager"
+    },
+    {
+      "id": "t2",
+      "quote": "The Redux architecture he set up made our codebase much easier to scale. Clean, predictable and well documented.",
+      "name": "Client name",
+      "title": "Engineering Lead"
+    },
+    {
+      "id": "t3",
+      "quote": "He integrated voice-to-text and a chatbot flow into our live app and it just worked.",
+      "name": "Client name",
+      "title": "Founder, HealthTech startup"
+    }
+  ]
+}

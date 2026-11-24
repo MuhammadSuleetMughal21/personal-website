@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/data/uploads/*
+!/data/uploads/.gitkeep
+
+!.env.example
+
+# local backups
+Archive.zip
+__MACOSX/

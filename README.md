@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# personal-website
 
-## Getting Started
+Animated portfolio for a mobile app developer: Next.js 16, GSAP (ScrollTrigger + SplitText),
+Motion, Lenis smooth scroll, Tailwind v4.
 
-First, run the development server:
+Content is edited from the separate admin app in `../personal-website-admin`.
+
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`.env.local` needs `ADMIN_API_KEY`, a shared secret the admin app sends with each request.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| What | File |
+| --- | --- |
+| Site content | `data/content.json` |
+| Contact messages | `data/messages.json` |
+| Uploaded images | `data/uploads/` (served at `/media/<file>`) |
 
-## Learn More
+The site owns this data. The admin reads and writes it through `/api/admin/*`, which requires
+`Authorization: Bearer <ADMIN_API_KEY>`. The site re-validates everything it receives (`lib/schema.ts`).
+Host the site somewhere with a writable disk (VPS, Railway, Render with a disk). On serverless
+hosts like Vercel, swap `lib/content.ts` for a database.
 
-To learn more about Next.js, take a look at the following resources:
+## Code map
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/(site)/page.tsx`: the page; sections in `components/site/`
+- `app/actions.ts`: contact form
+- `app/api/admin/`: content, messages and upload API for the admin app
+- `lib/content.ts`: file store (`getContent()` is cached and tagged `content`)
