@@ -24,7 +24,7 @@ export default function Process({ steps }: { steps: ProcessStep[] }) {
       gsap.utils.toArray<HTMLElement>("[data-step]").forEach((step) => {
         gsap
           .timeline({ scrollTrigger: { trigger: step, start: "top 72%", toggleActions: "play none none reverse" } })
-          .to(step.querySelector("[data-dot]"), { backgroundColor: "#c8ff3d", scale: 1.25, duration: 0.3 })
+          .to(step.querySelector("[data-dot]"), { backgroundColor: "#d8b46e", scale: 1.25, duration: 0.3 })
           .from(step.querySelectorAll("[data-in]"), { x: 40, opacity: 0, stagger: 0.08, duration: 0.7, ease: "power3.out" }, 0);
       });
     },

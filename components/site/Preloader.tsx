@@ -63,7 +63,7 @@ export default function Preloader() {
   return (
     <div
       ref={root}
-      className="fixed inset-0 z-[100] flex flex-col justify-between bg-[#0b0b10] p-6 sm:p-10"
+      className="fixed inset-0 z-[100] flex flex-col justify-between bg-bg-2 p-6 sm:p-10"
       style={{ clipPath: "inset(0 0 0% 0)" }}
       aria-hidden
     >

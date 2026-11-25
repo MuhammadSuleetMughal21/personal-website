@@ -40,7 +40,7 @@ export default function Experience({ jobs }: { jobs: Job[] }) {
                 </span>
                 <span className="hidden text-muted sm:block">{job.role}</span>
                 <motion.span
-                  animate={{ rotate: isOpen ? 45 : 0, backgroundColor: isOpen ? "#c8ff3d" : "rgba(255,255,255,0.06)" }}
+                  animate={{ rotate: isOpen ? 45 : 0, backgroundColor: isOpen ? "#d8b46e" : "rgba(255,255,255,0.06)" }}
                   className={`grid h-11 w-11 place-items-center rounded-full ${isOpen ? "text-black" : ""}`}
                 >
                   <Plus size={18} />

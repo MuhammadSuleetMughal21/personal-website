@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #07070a;
-  --bg-2: #0e0e13;
-  --card: #121218;
-  --line: rgba(255, 255, 255, 0.08);
-  --fg: #f3f2ee;
-  --muted: #8d8c96;
-  --accent: #c8ff3d;
-  --accent-2: #8b7bff;
+  /* Midnight & gold: royal-navy ink, warm ivory, antique champagne gold, amethyst glow */
+  --bg: #090a14;
+  --bg-2: #0e1020;
+  --card: #13152a;
+  --line: rgba(245, 239, 227, 0.08);
+  --fg: #f5efe3;
+  --muted: #9c98ad;
+  --accent: #d8b46e;
+  --accent-2: #6b4fd1;
 }
 
 @theme inline {
@@ -39,7 +40,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #000;
+  color: var(--bg);
 }
 
 /* Lenis */
@@ -76,7 +77,7 @@ html.lenis body {
 /* Outlined display text */
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(243, 242, 238, 0.35);
+  -webkit-text-stroke: 1px rgba(245, 239, 227, 0.35);
 }
 
 /* Infinite marquee */

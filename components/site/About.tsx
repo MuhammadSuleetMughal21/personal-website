@@ -90,7 +90,7 @@ export default function About({ profile }: { profile: Profile }) {
             {profile.avatar ? (
               <img src={profile.avatar} alt={profile.name} className="h-full w-full object-cover" />
             ) : (
-              <div className="flex h-full w-full flex-col items-center justify-center bg-[radial-gradient(circle_at_30%_20%,rgba(139,123,255,0.35),transparent_60%)]">
+              <div className="flex h-full w-full flex-col items-center justify-center bg-[radial-gradient(circle_at_30%_20%,rgba(107,79,209,0.4),transparent_60%)]">
                 <span className="font-display text-[9rem] font-bold leading-none text-white/10">
                   {profile.name
                     .split(" ")

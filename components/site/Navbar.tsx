@@ -103,7 +103,7 @@ export default function Navbar({ name, available }: { name: string; available: b
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-40 flex flex-col justify-end bg-[#0b0b10] px-6 pb-12 md:hidden"
+            className="fixed inset-0 z-40 flex flex-col justify-end bg-bg-2 px-6 pb-12 md:hidden"
             initial={{ clipPath: "circle(0% at calc(100% - 40px) 40px)" }}
             animate={{ clipPath: "circle(150% at calc(100% - 40px) 40px)" }}
             exit={{ clipPath: "circle(0% at calc(100% - 40px) 40px)" }}
